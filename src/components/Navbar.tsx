@@ -1,8 +1,18 @@
+import { useState } from "react";
+
 interface IProps {
     navItems: string[];
 }
 
 const Navbar = ({navItems}: IProps) => {
+    const active: string = "bg-indigo-800";
+    // states
+    const [isActive, setActive] = useState('hero');
+
+    const handleItemClick = (item: string) => {
+        setActive(item);
+    };
+
     return (
         <header className="bg-indigo-500 text-white p-2 flex justify-between items-center rounded-b-md">
             <h1 className="uppercase font-bold cursor-pointer bg-indigo-800 p-2 rounded-md">mijdo</h1>
@@ -11,7 +21,8 @@ const Navbar = ({navItems}: IProps) => {
                     {navItems.map(item => 
                         <li 
                         key={item}
-                        className="p-2 hover:bg-indigo-600 transition cursor-pointer rounded-md uppercase"
+                        className={`uppercase cursor-pointer p-2 rounded-md  ${isActive === item ? active : "hover:bg-indigo-800"}`}
+                        onClick={() => handleItemClick(item)}
                         >{item}</li>
                     )}
                 </ul>
