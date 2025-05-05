@@ -1,4 +1,5 @@
 import './App.css'
+import About from './components/About';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar'
@@ -13,6 +14,7 @@ function App() {
       </header>
       <main>
         <Hero />
+        <About />
       </main>
       <footer className='bg-indigo-800 p-5'>
         <Footer />
