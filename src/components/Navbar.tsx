@@ -2,15 +2,17 @@ import { useState } from "react";
 
 interface IProps {
     navItems: string[];
+    setPage: (value: string) => void;
 }
 
-const Navbar = ({navItems}: IProps) => {
+const Navbar = ({navItems, setPage}: IProps) => {
     const active: string = "bg-indigo-800";
     // states
     const [isActive, setActive] = useState('hero');
 
     const handleItemClick = (item: string) => {
         setActive(item);
+        setPage(item)
     };
 
     return (
