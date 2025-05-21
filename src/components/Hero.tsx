@@ -4,7 +4,7 @@ import TypingText from "./ui/HeaderEffect";
 
 const Hero = () => {
     return (
-        <section className="flex flex-col md:flex-row justify-between items-center bg-indigo-300 rounded-md my-15 md:space-x-40">
+        <section className="flex flex-col md:flex-row justify-between items-center bg-indigo-300 rounded-md my-15 md:space-x-5">
             <div className='text-center md:text-left'>
                 <TypingText
                     texts={["HI, I AM A DEVELOPER..", "FRONTEND DEVELOPER", "REACT JS DEVELOPER"]}
@@ -18,7 +18,9 @@ const Hero = () => {
                     <a href="https://www.linkedin.com/in/ahmed-mijdo-samir/" target='_blank'> <SiLinkedin size={36} className='bg-indigo-800 rounded-md p-1 hover:p-0' color='white'></SiLinkedin>  </a>
                 </div>
             </div>
-            <img className='rounded-md mt-5 w-sm md:mt-0' src={HeroImage} alt="HeroImage" />
+            <div>
+                <img className='rounded-md mt-5 w-fit md:mt-0' src={HeroImage} alt="HeroImage" />
+            </div>
         </section>
 )
 }
