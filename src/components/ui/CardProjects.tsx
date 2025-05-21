@@ -1,4 +1,5 @@
 import {SiGithub} from 'react-icons/si';
+import Buttons from './Button';
 
 interface IProps {
     imageURL: string;
@@ -6,9 +7,10 @@ interface IProps {
     title: string;
     proGithub: string;
     proLink: string;
+    openModal: () => void;
 }
 
-const CardProjects = ({imageURL, name, title, proGithub, proLink}: IProps) => {
+const CardProjects = ({imageURL, name, title, proGithub, proLink, openModal}: IProps) => {
     return (
         <div className="flex flex-col justify-between border border-gray-200 rounded-md text-center transition">
             <div className='overflow-hidden'>
@@ -16,9 +18,10 @@ const CardProjects = ({imageURL, name, title, proGithub, proLink}: IProps) => {
             </div>
             <div className="space-y-2 my-2">
                 <h3 className="text-white text-center bg-indigo-800 rounded-md py-1">{title}</h3>
-                <div className='flex space-x-2 items-center justify-evenly'>
+                <div className='flex space-x-4 items-center justify-evenly'>
                     <a href={proGithub} target="_blank"> <SiGithub size={36} className='bg-indigo-800 rounded-md p-1 hover:p-0' color='white'></SiGithub> </a>
-                    <button className='bg-indigo-800 rounded-md text-white p-2 cursor-pointer hover:bg-indigo-600'><a href={proLink} target='_blank'>Show Project</a></button>
+                    <Buttons className='bg-indigo-800 hover:bg-indigo-600'><a href={proLink} target='_blank'>Show Project</a></Buttons>
+                    <Buttons className='bg-red-600 hover:bg-red-400' onClick={openModal}>Datils</Buttons>
                 </div>
             </div>
         </div>

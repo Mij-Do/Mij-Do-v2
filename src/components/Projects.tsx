@@ -1,12 +1,22 @@
 import CardProjects from "./ui/CardProjects";
 import { dataProjects } from "../data";
+import Modal from "./ui/Modal";
+import { useState } from "react";
 
 
 
 const Projects = () => {
+
+    // state
+    const [isOpen, setIsOpen] = useState(false)
+    
+    // handellers
+    const open = () => setIsOpen(true);
+    const close = () => setIsOpen(false);
+
     // render
     const renderProjects = dataProjects.map(project => 
-        <CardProjects imageURL={project.imageURL} name={project.name} title={project.title} proLink={project.proLink} proGithub={project.proGithub}/>
+        <CardProjects openModal={open} imageURL={project.imageURL} name={project.name} title={project.title} proLink={project.proLink} proGithub={project.proGithub}/>
     )
     
     return (
@@ -15,6 +25,7 @@ const Projects = () => {
             <div className="flex flex-col md:flex-row space-x-2">
                 {renderProjects}
             </div>
+            <Modal isOpen={isOpen} close={close}></Modal>
         </section>
     )
 }
