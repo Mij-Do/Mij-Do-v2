@@ -5,3 +5,9 @@ export interface IProjectData {
     proLink: string;
     proGithub: string;
 }
+
+export interface ISkills {
+    title: string;
+    name: string;
+    precntage:string;
+}
