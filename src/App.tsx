@@ -22,7 +22,7 @@ function App() {
         {page === 'about' && <About />}
         {page === 'projects' && <Projects />}
       </main>
-      <footer className='bg-indigo-800 p-5'>
+      <footer className='bg-indigo-500 p-5'>
         <Footer />
       </footer>
     </>
