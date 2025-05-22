@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar'
 import Projects from './components/Projects';
+import LightningBackground from './components/LightNight';
 
 function App() {
   // states
@@ -14,17 +15,18 @@ function App() {
 
   return (
     <>
-      <header className="bg-indigo-500 text-white p-2 flex justify-between items-center rounded-b-md">
-        <Navbar navItems={navItems} setPage={setPage}/>
-      </header>
-      <main>
-        {page === 'hero' && <Hero />}
-        {page === 'about' && <About />}
-        {page === 'projects' && <Projects />}
-      </main>
-      <footer className='bg-indigo-500 p-5'>
-        <Footer />
-      </footer>
+      <LightningBackground />
+        <header className="bg-indigo-500 text-white p-2 flex justify-between items-center rounded-b-md">
+          <Navbar navItems={navItems} setPage={setPage}/>
+        </header>
+        <main>
+          {page === 'hero' && <Hero />}
+          {page === 'about' && <About />}
+          {page === 'projects' && <Projects />}
+        </main>
+        <footer className='bg-indigo-500 p-5'>
+          <Footer />
+        </footer>
     </>
   )
 }

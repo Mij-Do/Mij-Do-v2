@@ -39,7 +39,7 @@ useEffect(() => {
 }, [text, isDeleting, loopNum, texts, typingSpeed, deletingSpeed]);
 
 return (
-    <h1 className="text-white bg-indigo-800 rounded-md p-2 mb-5 text-3xl">
+    <h1 className="text-white  rounded-md p-2 mb-5 text-3xl">
         {text}
         <span className="inline-block w-1 h-8 bg-white ml-1 animate-pulse"></span>
     </h1>
