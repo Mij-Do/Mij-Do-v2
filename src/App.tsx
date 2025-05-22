@@ -24,7 +24,7 @@ function App() {
           {page === 'about' && <About />}
           {page === 'projects' && <Projects />}
         </main>
-        <footer className='bg-indigo-500 p-5'>
+        <footer className='bg-indigo-950 w-full md:w-lg mx-auto rounded-md p-5'>
           <Footer />
         </footer>
     </>

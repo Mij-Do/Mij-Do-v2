@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section className="text-white my-15">
 
-            <h1 className="text-center bg-indigo-800 rounded-md p-2 mb-5 text-3xl">About Me</h1>
+            <h1 className="text-center bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-3xl">About Me</h1>
             <div className="flex flex-col justify-between items-center text-center  p-2 md:flex-row space-x-10">
                 <div className="w-fit mx-auto">
                     <img className="w-full" src={aboutImage} alt="About Image" />

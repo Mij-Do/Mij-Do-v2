@@ -32,8 +32,8 @@ const Projects = () => {
 
     return (
         <section className="my-15">
-            <h1 className="text-white text-center bg-indigo-800 rounded-md p-2 mb-5 text-3xl">My Projects</h1>
-            <div className="flex flex-col md:flex-row space-x-2">
+            <h1 className="text-white text-center bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-3xl">My Projects</h1>
+            <div className="flex flex-col md:flex-row md:space-x-2">
                 {renderProjects}
             </div>
             {selectedProject && (
