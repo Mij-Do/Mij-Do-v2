@@ -4,9 +4,9 @@ import CardSkills from "./ui/CardSkills";
 
 const About = () => {
     return (
-        <section className="bg-indigo-300 rounded-md my-15">
+        <section className="text-white my-15">
 
-            <h1 className="text-white text-center bg-indigo-800 rounded-md p-2 mb-5 text-3xl">About Me</h1>
+            <h1 className="text-center bg-indigo-800 rounded-md p-2 mb-5 text-3xl">About Me</h1>
             <div className="flex flex-col justify-between items-center text-center  p-2 md:flex-row space-x-10">
                 <div className="w-fit mx-auto">
                     <img className="w-full" src={aboutImage} alt="About Image" />
@@ -25,8 +25,8 @@ const About = () => {
             </div>
 
             {/* Skills */}
-            <div className="bg-indigo-500 rounded-md w-full text-white">
-                <h2 className="text-center bg-indigo-600 rounded-md p-2 text-lg">Skills</h2>
+            <div className="w-full text-white">
+                <hr className="w-1/2 m-auto my-20"/>
                 <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <CardSkills title="Html5" color="bg-orange-400" precntage="100%"><SiHtml5 size={48} className="bg-orange-400 rounded-md hover:scale-95 transition mb-5"/></CardSkills>
                     <CardSkills title="Css3" color="bg-blue-400" precntage="98%"><SiCss3 size={48} className="bg-blue-400 rounded-md hover:scale-95 transition mb-5"/></CardSkills>

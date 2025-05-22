@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <LightningBackground />
-        <header className="bg-indigo-500 text-white p-2 flex justify-between items-center rounded-b-md">
+        <header className="text-white p-2 flex justify-between items-center rounded-b-md">
           <Navbar navItems={navItems} setPage={setPage}/>
         </header>
         <main>

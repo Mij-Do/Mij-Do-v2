@@ -4,12 +4,12 @@ import TypingText from "./ui/HeaderEffect";
 
 const Hero = () => {
     return (
-        <section className="flex flex-col md:flex-row justify-between items-center my-15 md:space-x-5">
+        <section className="flex flex-col md:flex-row justify-between items-center text-white my-15 md:space-x-5">
             <div className='text-center md:text-left'>
                 <TypingText
                     texts={["HI, I AM A DEVELOPER..", "FRONTEND DEVELOPER", "REACT JS DEVELOPER"]}
                 />
-                <div className="bg-indigo-300 rounded-md">
+                <div>
                     <p>
                         Front-end developer passionate about building clean, responsive, and user-friendly web interfaces using HTML, CSS, JavaScript, React, and TypeScript.
                     </p>
