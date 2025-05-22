@@ -11,7 +11,7 @@ const About = () => {
                 <div className="w-fit mx-auto">
                     <img className="w-full" src={aboutImage} alt="About Image" />
                 </div>
-                <p className="w-fit">
+                <p className="w-fit md:mx-2">
                     Hi, I'm Ahmed — a passionate Front-End Developer who builds modern, responsive, and user-friendly web interfaces. I specialize in turning creative ideas into functional and elegant websites using a solid tech stack that includes:
 
                     HTML | CSS | JavaScript | React JS | TypeScript | Tailwind CSS | SASS | Bootstrap

@@ -10,7 +10,7 @@ const Hero = () => {
                     texts={["HI, I AM A DEVELOPER..", "FRONTEND DEVELOPER", "REACT JS DEVELOPER"]}
                 />
                 <div>
-                    <p>
+                    <p className="md:mx-2">
                         Front-end developer passionate about building clean, responsive, and user-friendly web interfaces using HTML, CSS, JavaScript, React, and TypeScript.
                     </p>
                     <div className="flex items-center space-x-5 py-2 justify-center">
