@@ -5,16 +5,20 @@ import { IProjectData } from "../interfaces";
 
 export const dataProjects: IProjectData[] = [
     {
+        id: '0',
         title: 'E-commerce Project',
         name: 'E-commerce',
         imageURL: ecommerce,
+        description: '',
         proLink: 'https://mij-do.github.io/E-Commerce-Project/',
         proGithub: 'https://github.com/Mij-Do/E-Commerce-Project',
     },
     {
+        id: '1',
         title: 'Crud React Project',
         name: 'Crud React',
         imageURL: crudReact,
+        description: '',
         proLink: 'https://react-crud-project-vert.vercel.app/',
         proGithub: 'https://github.com/Mij-Do/React-CrudProject',
     }
