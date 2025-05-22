@@ -44,10 +44,10 @@ const Projects = () => {
                     close={close}
                 >
                     <div>
-                        <div>
+                        <div className="my-2">
                             <img src={selectedProject.imageURL} alt="" />
                         </div>
-                        <p>{selectedProject.description}</p>
+                        <p className="text-indigo-500 text-center">{selectedProject.description}</p>
                     </div>
                 </Modal>
             )}
