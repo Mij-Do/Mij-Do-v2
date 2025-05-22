@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar'
 import Projects from './components/Projects';
 import LightningBackground from './components/LightNight';
+import Contact from './components/Contact';
 
 function App() {
   // states
@@ -23,6 +24,7 @@ function App() {
           {page === 'hero' && <Hero />}
           {page === 'about' && <About />}
           {page === 'projects' && <Projects />}
+          {page === 'contact' && <Contact />}
         </main>
         <footer className='bg-indigo-950 w-full md:w-lg mx-auto rounded-md p-5'>
           <Footer />
@@ -31,6 +33,6 @@ function App() {
   )
 }
 
-export default App
+export default App;
 
 
