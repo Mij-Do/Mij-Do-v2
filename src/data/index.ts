@@ -1,6 +1,6 @@
 import ecommerce from "./../assets/ecommerce project.png";
 import crudReact from "./../assets/crudreactproject.png";
-import { IProjectData } from "../interfaces";
+import { Inputs, IProjectData } from "../interfaces";
 
 
 export const dataProjects: IProjectData[] = [
@@ -22,5 +22,21 @@ export const dataProjects: IProjectData[] = [
         proLink: 'https://react-crud-project-vert.vercel.app/',
         proGithub: 'https://github.com/Mij-Do/React-CrudProject',
     }
+];
+
+
+export const dataInputs: Inputs[] = [
+    {
+        label: 'USER NAME',
+        id: 'user',
+    },
+    {
+        label: 'EMAIL',
+        id: 'mail',
+    },
+    {
+        label: 'YOUR MESSEGE',
+        id: 'msg',
+    },
 ];
 

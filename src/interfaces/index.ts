@@ -14,3 +14,8 @@ export interface Project {
     description: string;
     imageURL: string;
 }
+
+export interface Inputs {
+    label: string;
+    id: string;
+}
