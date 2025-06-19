@@ -30,6 +30,10 @@ const Projects = () => {
         </div>
     )
 
+    const renderHSkills = selectedProject?.HSkills.map(skills => 
+        <span className="m-2 p-2 bg-indigo-900 text-white rounded-md">{skills}</span>
+    )
+
     return (
         <section className="my-15">
             <h1 className="text-white text-center bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-3xl">My Projects</h1>
@@ -47,7 +51,12 @@ const Projects = () => {
                         <div className="my-2">
                             <img src={selectedProject.imageURL} alt="" />
                         </div>
-                        <p className="text-indigo-500 text-center">{selectedProject.description}</p>
+                        <div>
+                            <p className="text-indigo-500 text-center">{selectedProject.description}</p>
+                        </div>
+                        <div className="my-5">
+                            {renderHSkills}
+                        </div>
                     </div>
                 </Modal>
             )}

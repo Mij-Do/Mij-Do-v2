@@ -12,6 +12,7 @@ export const dataProjects: IProjectData[] = [
         description: 'E-Commerce Project is a simple and responsive online shopping website built with HTML, CSS, and JavaScript. It features a clean product display, user-friendly layout, and basic interactivity, showcasing the core structure of an e-commerce front-end.',
         proLink: 'https://mij-do.github.io/E-Commerce-Project/',
         proGithub: 'https://github.com/Mij-Do/E-Commerce-Project',
+        HSkills: ['HTML', 'CSS', 'JS'],
     },
     {
         id: '1',
@@ -21,6 +22,7 @@ export const dataProjects: IProjectData[] = [
         description: 'React CRUD Project is a responsive web application built with React. It demonstrates core CRUD functionality (Create, Read, Update, Delete) using a clean and modern user interface. The project highlights practical use of React state management, form handling, and component structure.',
         proLink: 'https://react-crud-project-vert.vercel.app/',
         proGithub: 'https://github.com/Mij-Do/React-CrudProject',
+        HSkills: ['ReactJS', 'TS', 'TailindCSS'],
     }
 ];
 

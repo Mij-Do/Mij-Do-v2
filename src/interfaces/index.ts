@@ -6,6 +6,7 @@ export interface IProjectData {
     description: string;
     proLink: string;
     proGithub: string;
+    HSkills: string[];
 }
 
 export interface Project {
@@ -13,6 +14,7 @@ export interface Project {
     title: string;
     description: string;
     imageURL: string;
+    HSkills: string[];
 }
 
 export interface Inputs {
