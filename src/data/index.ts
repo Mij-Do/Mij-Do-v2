@@ -1,5 +1,6 @@
 import ecommerce from "./../assets/ecommerce project.png";
 import crudReact from "./../assets/crudreactproject.png";
+import ToDoList from "./../assets/ToDoList2.png";
 import { Inputs, IProjectData } from "../interfaces";
 
 
@@ -23,6 +24,16 @@ export const dataProjects: IProjectData[] = [
         proLink: 'https://react-crud-project-vert.vercel.app/',
         proGithub: 'https://github.com/Mij-Do/React-CrudProject',
         HSkills: ['ReactJS', 'TS', 'TailindCSS'],
+    },
+    {
+        id: '2',
+        title: 'To-Do List V2',
+        name: 'To-Do List',
+        imageURL: ToDoList,
+        description: 'A basic To-Do List app using HTML, CSS, and JavaScript. Users can add, mark as done, and delete tasks. It features a dark-themed UI with a clean and modern design.',
+        proLink: 'https://mij-do.github.io/TO_DO-List-V2/',
+        proGithub: 'https://github.com/Mij-Do/TO_DO-List-V2',
+        HSkills: ['HTML', 'CSS', 'JS'],
     }
 ];
 
