@@ -20,7 +20,7 @@ function App() {
         <header className="text-white p-2 flex justify-between items-center rounded-b-md">
           <Navbar navItems={navItems} setPage={setPage}/>
         </header>
-        <main>
+        <main className='md:m-5'>
           {page === 'hero' && <Hero />}
           {page === 'about' && <About />}
           {page === 'projects' && <Projects />}
