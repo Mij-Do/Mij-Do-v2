@@ -17,13 +17,13 @@ const CardProjects = ({project, openModal}: IProps) => {
     return (
         <div className="h-70 mb-5 flex flex-col justify-between border border-gray-200 rounded-md text-center transition">
             <div className='overflow-hidden'>
-                <img className="md:w-full rounded-md hover:opacity-70 hover:scale-110" src={imageURL} alt={name} />
+                <img className="md:w-full rounded-md hover:opacity-70 hover:scale-110 transition" src={imageURL} alt={name} />
             </div>
             
             <div className="space-y-2 my-2">
                 <h3 className="text-white text-center bg-indigo-800 rounded-md py-1">{title}</h3>
                 <div className='flex space-x-4 items-center justify-evenly'>
-                    <a href={proGithub} target="_blank"> <SiGithub size={36} className='bg-indigo-800 rounded-md p-1 hover:p-0' color='white'></SiGithub> </a>
+                    <a href={proGithub} target="_blank"> <SiGithub size={36} className='bg-indigo-800 rounded-md p-1 hover:p-2 transition-all' color='white'></SiGithub> </a>
                     <Buttons className='bg-indigo-800 hover:bg-indigo-600'><a href={proLink} target='_blank'>Show Project</a></Buttons>
                     <Buttons className='bg-red-600 hover:bg-red-400' onClick={onClickDetails}>Details</Buttons>
                 </div>
