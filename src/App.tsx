@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import LightningBackground from './components/LightNight';
 import Contact from './components/Contact';
 
+
 function App() {
   // states
   const [page, setPage] = useState('hero');
