@@ -35,17 +35,19 @@ const Navbar = ({navItems, setPage}: IProps) => {
             onClick={() => handleItemClick(item)}
         >{item}</li>
     );
+    const renderIconsBtn = isOpen === false ? 
+                            <HiOutlineViewList onClick={handelOpen} 
+                                                size={42} 
+                                                className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/> : 
+                            <HiX onClick={handelOpen} 
+                                    size={42} 
+                                    className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/>;
 
     return (
         <div className="flex flex-col w-full text-center md:flex-row md:justify-between">
             <h1 className="uppercase font-bold cursor-pointer bg-indigo-800 p-2 mb-2 rounded-md">mijdo</h1>
             <nav> 
-                {isOpen === false ? <HiOutlineViewList onClick={handelOpen} 
-                                    size={42} 
-                                    className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/> : 
-                                    <HiX onClick={handelOpen} 
-                                    size={42} 
-                                    className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/>}
+                {renderIconsBtn}
                 <ul className={`${isOpen === true ? 'flex' : 'hidden'} flex-col md:flex md:flex-row`}>
                     {renderNavItems}
                 </ul>

@@ -20,7 +20,7 @@ const CardProjects = ({project, openModal}: IProps) => {
                 <img className="md:w-full rounded-md hover:opacity-70 hover:scale-110 transition" src={imageURL} alt={name} />
             </div>
             
-            <div className="space-y-2 my-2">
+            <div className="space-y-2 md:m-2">
                 <h3 className="text-white text-center bg-indigo-800 rounded-md py-1">{title}</h3>
                 <div className='flex space-x-4 items-center justify-evenly'>
                     <a href={proGithub} target="_blank"> <SiGithub size={36} className='bg-indigo-800 rounded-md p-1 hover:p-2 transition-all' color='white'></SiGithub> </a>
