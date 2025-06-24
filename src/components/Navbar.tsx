@@ -36,7 +36,7 @@ const Navbar = ({navItems, setPage}: IProps) => {
         <div className="flex flex-col w-full text-center md:flex-row md:justify-between">
             <h1 className="uppercase font-bold cursor-pointer bg-indigo-800 p-2 mb-2 rounded-md">mijdo</h1>
             <nav> 
-                <HiOutlineViewList onClick={handelOpen} size={50} className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/>
+                <HiOutlineViewList onClick={handelOpen} size={40} className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/>
                 <ul className={`${open === true ? 'flex' : 'hidden'} flex-col md:flex md:flex-row`}>
                     {renderNavItems}
                 </ul>
