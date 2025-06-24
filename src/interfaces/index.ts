@@ -20,4 +20,12 @@ export interface Project {
 export interface Inputs {
     label: string;
     id: string;
+    name: keyof IValue;
+    type: string;
+}
+
+export interface IValue {
+    user: string,
+    email: string,
+    msg: string,
 }

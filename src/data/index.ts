@@ -42,14 +42,20 @@ export const dataInputs: Inputs[] = [
     {
         label: 'USER NAME',
         id: 'user',
+        name: 'user',
+        type: 'text',
     },
     {
         label: 'EMAIL',
-        id: 'mail',
+        id: 'email',
+        name: 'email',
+        type: 'email',
     },
     {
         label: 'YOUR MESSEGE',
         id: 'msg',
+        name: 'msg',
+        type: 'text',
     },
 ];
 

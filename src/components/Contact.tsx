@@ -1,30 +1,46 @@
 import { dataInputs } from "../data";
 import Button from "./ui/Button";
 import Input from "./ui/Input";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
+import { IValue } from "../interfaces";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Contact = () => {
 
     // state
-    const [value, setValue] = useState();
+    const [value, setValue] = useState <IValue> ({
+        user: '',
+        email: '',
+        msg: '',
+    });
+
+    
+    // handeller
+    const onSubmitHandeller = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+    }
+    
+    const onChangeHandeller = (evt: ChangeEvent<HTMLInputElement>) => {
+        const name = evt.target.name as keyof IValue;
+        setValue((prev) => ({
+            ...prev,
+            [name]: evt.target.value,
+        }));
+    }
+
+    const onClickHandeller = () => {
+        toast('Email was Send Succssefully!');
+    }
+
 
     // render
     const renderInputs = dataInputs.map(input => 
         <div className="flex flex-col space-y-5">
             <label className="text-white text-center w-full bg-indigo-900 rounded-md p-2 mx-auto" htmlFor={input.id}>{input.label}</label>
-            <Input className="w-full mb-5" id={input.id} value={value} onChange={() => setValue}/>
+            <Input className="w-full mb-5" id={input.id} name={input.name} type={input.type} value={value[input.name]} onChange={onChangeHandeller}/>
         </div>
     )
-
-    // handeller
-    const onSubmitHandeller = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-    }
-
-    const onSubmitChange = () => {
-        
-    }
 
     return (
         <section className="my-15">
@@ -32,9 +48,13 @@ const Contact = () => {
             <div className="flex w-full justify-evenly items-center">
                 <form className="w-full md:w-lg" onSubmit={onSubmitHandeller}>
                     {renderInputs}
-                    <Button onClick={onSubmitChange} className="text-white text-center hover:bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-lg transition">SEND MAIL</Button>
+                    <Button onClick={onClickHandeller} className="text-white text-center hover:bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-lg transition">SEND MAIL</Button>
                 </form>
             </div>
+            <Toaster  toastOptions={{style: {
+                backgroundColor: 'indigo',
+                color: 'white',
+            }}}/>
         </section>
     )
 }

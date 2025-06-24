@@ -31,17 +31,17 @@ const Navbar = ({navItems, setPage}: IProps) => {
     const renderNavItems = navItems.map(item => 
         <li 
             key={item}
-            className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 rounded-md  ${isActive === item ? active : "hover:bg-indigo-800"}`}
+            className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 rounded-md transition-all ${isActive === item ? active : "hover:bg-indigo-800"}`}
             onClick={() => handleItemClick(item)}
         >{item}</li>
     );
     const renderIconsBtn = isOpen === false ? 
                             <HiOutlineViewList onClick={handelOpen} 
                                                 size={42} 
-                                                className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/> : 
+                                                className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-2`}/> : 
                             <HiX onClick={handelOpen} 
                                     size={42} 
-                                    className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-5`}/>;
+                                    className={`bg-indigo-800 rounded-md cursor-pointer md:hidden m-auto mb-2`}/>;
 
     return (
         <div className="flex flex-col w-full text-center md:flex-row md:justify-between">
