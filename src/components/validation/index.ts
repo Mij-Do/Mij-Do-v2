@@ -36,7 +36,7 @@ export const InputValidation  = (input: IValue) => {
         errors.email = 'Email is not Valid!';
     }
     if (!input.msg.trim() || input.msg.length < 10 || input.msg.length > 800) {
-        errors.msg = 'User Name should be more than 10 characters, and less than 800!';
+        errors.msg = 'Messege should be more than 10 characters, and less than 800!';
     }
 
     return errors;
