@@ -49,7 +49,7 @@ export const dataInputs: Inputs[] = [
         label: 'EMAIL',
         id: 'email',
         name: 'email',
-        type: 'email',
+        type: 'text',
     },
     {
         label: 'YOUR MESSEGE',

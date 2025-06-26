@@ -4,21 +4,34 @@ import Input from "./ui/Input";
 import { ChangeEvent, useState } from "react";
 import { IValue } from "../interfaces";
 import toast, { Toaster } from 'react-hot-toast';
+import { InputValidation } from "./validation";
 
 
 const Contact = () => {
-
-    // state
-    const [value, setValue] = useState <IValue> ({
+    const defaultInput = {
         user: '',
         email: '',
         msg: '',
-    });
+    }
+
+    // state
+    const [value, setValue] = useState <IValue> (defaultInput);
 
     
     // handeller
     const onSubmitHandeller = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        
+        const errors = InputValidation({user: value.user, email: value.email, msg: value.msg});
+        console.log(errors)
+        const hasError = Object.values(errors).some(value => value === '') && Object.values(errors).every(value => value === '');
+        console.log(hasError);
+        if (!hasError) {
+            return;
+        }
+        console.log("send this to server!");
+        setValue (defaultInput);
+        toast('Email was Send Succssefully!');
     }
     
     const onChangeHandeller = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -30,7 +43,7 @@ const Contact = () => {
     }
 
     const onClickHandeller = () => {
-        toast('Email was Send Succssefully!');
+
     }
 
 
