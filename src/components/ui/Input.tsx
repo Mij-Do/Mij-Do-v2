@@ -4,7 +4,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const Input = ({className, ...rest}: IProps) => {
     return (
-        <input type="text" className= {`${className} md:mx-auto border border-gray-300 rounded-md text-white p-2`} {...rest}/>
+        <input type="text" className= {`${className} md:mx-auto border border-gray-300 rounded-md text-white p-2 focus:bg-auto focus:outline-0`} {...rest}/>
     )
 }
 

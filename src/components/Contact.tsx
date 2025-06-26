@@ -5,6 +5,7 @@ import { ChangeEvent, useState } from "react";
 import { IValue } from "../interfaces";
 import toast, { Toaster } from 'react-hot-toast';
 import { InputValidation } from "./validation";
+import ErrorMsg from "./ui/ErrorMsg";
 
 
 const Contact = () => {
@@ -16,6 +17,7 @@ const Contact = () => {
 
     // state
     const [value, setValue] = useState <IValue> (defaultInput);
+    const [errors, setErrors] = useState(defaultInput); 
 
     
     // handeller
@@ -27,6 +29,7 @@ const Contact = () => {
         const hasError = Object.values(errors).some(value => value === '') && Object.values(errors).every(value => value === '');
         console.log(hasError);
         if (!hasError) {
+            setErrors(errors);
             return;
         }
         console.log("send this to server!");
@@ -40,6 +43,10 @@ const Contact = () => {
             ...prev,
             [name]: evt.target.value,
         }));
+        setErrors({
+            ...errors,
+            [name]: '',
+        })
     }
 
     const onClickHandeller = () => {
@@ -51,7 +58,8 @@ const Contact = () => {
     const renderInputs = dataInputs.map(input => 
         <div className="flex flex-col space-y-5">
             <label className="text-white text-center w-full bg-indigo-900 rounded-md p-2 mx-auto" htmlFor={input.id}>{input.label}</label>
-            <Input className="w-full mb-5" id={input.id} name={input.name} type={input.type} value={value[input.name]} onChange={onChangeHandeller}/>
+            <Input className="w-full mb-2" id={input.id} name={input.name} type={input.type} value={value[input.name]} onChange={onChangeHandeller}/>
+            <ErrorMsg msg={errors[input.name]} />
         </div>
     )
 

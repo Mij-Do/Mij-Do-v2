@@ -30,13 +30,13 @@ export const InputValidation  = (input: IValue) => {
     const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(input.email);
 
     if (!input.user.trim() || input.user.length < 10 || input.user.length > 80) {
-        errors.user = 'User Name should be more than 10 chatcters, and less than 80!';
+        errors.user = 'User Name should be more than 10 characters, and less than 80!';
     }
     if (!input.email.trim() || !validEmail) {
         errors.email = 'Email is not Valid!';
     }
     if (!input.msg.trim() || input.msg.length < 10 || input.msg.length > 800) {
-        errors.msg = 'User Name should be more than 10 chatcters, and less than 800!';
+        errors.msg = 'User Name should be more than 10 characters, and less than 800!';
     }
 
     return errors;
