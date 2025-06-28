@@ -25,14 +25,15 @@ const Contact = () => {
         event.preventDefault();
         
         const errors = InputValidation({user: value.user, email: value.email, msg: value.msg});
-        console.log(errors)
+        
         const hasError = Object.values(errors).some(value => value === '') && Object.values(errors).every(value => value === '');
-        console.log(hasError);
+        
+
         if (!hasError) {
             setErrors(errors);
             return;
         }
-        console.log("send this to server!");
+
         setValue (defaultInput);
         toast('Email was Send Succssefully!');
     }

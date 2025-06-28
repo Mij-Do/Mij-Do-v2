@@ -1,6 +1,8 @@
 import ecommerce from "./../assets/ecommerce project.png";
 import crudReact from "./../assets/crudreactproject.png";
 import ToDoList from "./../assets/ToDoList2.png";
+import Calculator from "./../assets/calculator.png";
+
 import { Inputs, IProjectData } from "../interfaces";
 
 
@@ -33,6 +35,16 @@ export const dataProjects: IProjectData[] = [
         description: 'A basic To-Do List app using HTML, CSS, and JavaScript. Users can add, mark as done, and delete tasks. It features a dark-themed UI with a clean and modern design.',
         proLink: 'https://mij-do.github.io/TO_DO-List-V2/',
         proGithub: 'https://github.com/Mij-Do/TO_DO-List-V2',
+        HSkills: ['HTML', 'CSS', 'JS'],
+    },
+    {
+        id: '3',
+        title: 'Calculator',
+        name: 'Calculator',
+        imageURL: Calculator,
+        description: 'A basic calculator built with HTML, CSS, and JavaScript. It performs standard arithmetic operations like addition, subtraction, multiplication, and division. The design is clean and responsive, making it easy to use on any device.',
+        proLink: 'https://mij-do.github.io/Simple-Calcolator/',
+        proGithub: 'https://github.com/Mij-Do/Simple-Calcolator',
         HSkills: ['HTML', 'CSS', 'JS'],
     }
 ];
