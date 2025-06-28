@@ -28,8 +28,8 @@ const Contact = () => {
         
         const hasError = Object.values(errors).some(value => value === '') && Object.values(errors).every(value => value === '');
         
-
         if (!hasError) {
+            toast('Please, Entery the Fields!');
             setErrors(errors);
             return;
         }
