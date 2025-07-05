@@ -2,6 +2,9 @@ import ecommerce from "./../assets/ecommerce project.png";
 import crudReact from "./../assets/crudreactproject.png";
 import ToDoList from "./../assets/ToDoList2.png";
 import Calculator from "./../assets/calculator.png";
+import Leon from "./../assets/Leon-Templates-react.png";
+import Example from "./../assets/example-templates.png";
+
 
 import { Inputs, IProjectData } from "../interfaces";
 
@@ -46,7 +49,27 @@ export const dataProjects: IProjectData[] = [
         proLink: 'https://mij-do.github.io/Simple-Calcolator/',
         proGithub: 'https://github.com/Mij-Do/Simple-Calcolator',
         HSkills: ['HTML', 'CSS', 'JS'],
-    }
+    },
+    {
+        id: '4',
+        title: 'Leon Project',
+        name: 'leon Project',
+        imageURL: Leon,
+        description: 'Leon Template is a simple project I built to practice the skills I recently learned, such as React, TypeScript, and using Sass for styling. The main goal was hands-on training and improving my understanding by building a complete design.',
+        proLink: 'https://leon-project-v2.vercel.app/',
+        proGithub: 'https://github.com/Mij-Do/Leon-Project-V2',
+        HSkills: ['ReactJS', 'TS', 'Sass'],
+    },
+    {
+        id: '5',
+        title: 'Example Project',
+        name: 'Example',
+        imageURL: Example,
+        description: 'Example Project is a simple website template for booking camping trips at different prices and locations in the USA. It was built using HTML, CSS, and JavaScript..',
+        proLink: 'https://mij-do.github.io/Example-Project-/',
+        proGithub: 'https://github.com/Mij-Do/Example-Project-',
+        HSkills: ['HTML', 'CSS', 'JS'],
+    },
 ];
 
 
