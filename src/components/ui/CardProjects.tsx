@@ -17,7 +17,7 @@ const CardProjects = ({project, openModal}: IProps) => {
     return (
         <div className="h-70 mb-5 flex flex-col justify-between border border-gray-200 rounded-md text-center transition">
             <div className='overflow-hidden'>
-                <img className="md:w-full rounded-md hover:opacity-70 hover:scale-110 transition" src={imageURL} alt={name} />
+                <img className="w-full md:w-120 md:h-40 rounded-md hover:opacity-70 hover:scale-110 transition" src={imageURL} alt={name} />
             </div>
             
             <div className="space-y-2 md:m-2">
