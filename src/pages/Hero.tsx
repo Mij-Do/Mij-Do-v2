@@ -1,6 +1,6 @@
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import HeroImage from './../assets/HeroImage.png'
-import TypingText from "./ui/HeaderEffect";
+import TypingText from "../components/ui/HeaderEffect";
 
 const Hero = () => {
     return (

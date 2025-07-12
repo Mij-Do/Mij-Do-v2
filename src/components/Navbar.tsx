@@ -1,40 +1,18 @@
 import { useState } from "react";
 import { HiOutlineViewList } from 'react-icons/hi';
 import { HiX } from 'react-icons/hi';
+import { NavLink } from "react-router-dom";
 
 
-interface IProps {
-    navItems: string[];
-    setPage: (value: string) => void;
-}
+interface IProps {}
 
-const Navbar = ({navItems, setPage}: IProps) => {
-    const active: string = "bg-indigo-800";
-    // states
-    const [isActive, setActive] = useState('hero');
+const Navbar = ({}: IProps) => {
     const [isOpen, setIsOpen] = useState(false);
-
-
-
-    // handellers
-    const handleItemClick = (item: string) => {
-        setActive(item);
-        setPage(item)
-    };
 
     const handelOpen = () => {
         setIsOpen(!isOpen);
     }
 
-
-    // render
-    const renderNavItems = navItems.map(item => 
-        <li 
-            key={item}
-            className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 rounded-md transition-all ${isActive === item ? active : "hover:bg-indigo-800"}`}
-            onClick={() => handleItemClick(item)}
-        >{item}</li>
-    );
     const renderIconsBtn = isOpen === false ? 
                             <HiOutlineViewList onClick={handelOpen} 
                                                 size={42} 
@@ -49,7 +27,10 @@ const Navbar = ({navItems, setPage}: IProps) => {
             <nav> 
                 {renderIconsBtn}
                 <ul className={`${isOpen === true ? 'flex' : 'hidden'} flex-col md:flex md:flex-row`}>
-                    {renderNavItems}
+                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/'}> hero </NavLink> </li>
+                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/about'}> about </NavLink> </li>
+                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/projects'}> projects </NavLink> </li>
+                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/contact'}> contact </NavLink> </li>
                 </ul>
             </nav>
         </div>

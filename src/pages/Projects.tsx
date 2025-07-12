@@ -1,6 +1,6 @@
-import CardProjects from "./ui/CardProjects";
+import CardProjects from "../components/ui/CardProjects";
 import { dataProjects } from "../data";
-import Modal from "./ui/Modal";
+import Modal from "../components/ui/Modal";
 import { useState } from "react";
 import { Project } from "../interfaces"
 

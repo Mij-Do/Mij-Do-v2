@@ -1,6 +1,6 @@
 import aboutImage from "./../assets/aboutImage.png"
 import { SiJavascript, SiHtml5, SiCss3, SiReact, SiBootstrap, SiTailwindcss, SiSass, SiTypescript } from "react-icons/si";
-import CardSkills from "./ui/CardSkills";
+import CardSkills from "../components/ui/CardSkills";
 
 const About = () => {
     return (

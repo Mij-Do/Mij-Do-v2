@@ -1,11 +1,11 @@
 import { dataInputs } from "../data";
-import Button from "./ui/Button";
-import Input from "./ui/Input";
+import Button from "../components/ui/Button";
+import Input from "../components/ui/Input";
 import { ChangeEvent, useState } from "react";
 import { IValue } from "../interfaces";
 import toast, { Toaster } from 'react-hot-toast';
-import { InputValidation } from "./validation";
-import ErrorMsg from "./ui/ErrorMsg";
+import { InputValidation } from "../components/validation";
+import ErrorMsg from "../components/ui/ErrorMsg";
 
 
 const Contact = () => {
