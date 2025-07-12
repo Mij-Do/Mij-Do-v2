@@ -27,10 +27,10 @@ const Navbar = ({}: IProps) => {
             <nav> 
                 {renderIconsBtn}
                 <ul className={`${isOpen === true ? 'flex' : 'hidden'} flex-col md:flex md:flex-row`}>
-                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/'}> hero </NavLink> </li>
-                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/about'}> about </NavLink> </li>
-                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/projects'}> projects </NavLink> </li>
-                    <li className={`uppercase cursor-pointer p-2 md:ml-2 mb-2 md:mb-0 rounded-md transition-all hover:bg-indigo-800`}> <NavLink to={'/contact'}> contact </NavLink> </li>
+                    <li className="p-2"> <NavLink to={'/'}> hero </NavLink> </li>
+                    <li className="p-2"> <NavLink to={'/about'}> about </NavLink> </li>
+                    <li className="p-2"> <NavLink to={'/projects'}> projects </NavLink> </li>
+                    <li className="p-2"> <NavLink to={'/contact'}> contact </NavLink> </li>
                 </ul>
             </nav>
         </div>

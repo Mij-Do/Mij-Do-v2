@@ -4,14 +4,25 @@
   font-family: system-ui;
 }
 
-nav .active {
-  background-color: #372aac;
+nav a {
+  text-transform: uppercase;
+  cursor: pointer;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #3730a3;
+}
+
+nav .active {
+  background-color: #3730a3;
 }
 
 @media (max-width: 768px) {
-  nav .active {
+  nav a {
     width: 100%;
     display: block;
   }
