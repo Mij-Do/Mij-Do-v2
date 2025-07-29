@@ -1,7 +1,18 @@
-.wrapper {
+/* dark mode */
+.wrapperDark {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, #0a0a23, #000000);
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+}
+
+/* white mode */
+.wrapperWhite {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #c1c1ff, #ffffff);
     overflow: hidden;
     position: fixed;
     z-index: -1;
