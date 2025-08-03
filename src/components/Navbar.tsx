@@ -3,11 +3,10 @@ import { HiOutlineViewList } from 'react-icons/hi';
 import { HiX } from 'react-icons/hi';
 import { NavLink } from "react-router-dom";
 
-
-interface IProps {}
-
-const Navbar = ({}: IProps) => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const IconStyles = "uppercase font-bold cursor-pointer bg-indigo-800 rounded-md";
 
     const handelOpen = () => {
         setIsOpen(!isOpen);
@@ -23,10 +22,11 @@ const Navbar = ({}: IProps) => {
 
     return (
         <div className="flex flex-col w-full text-center md:flex-row md:justify-between">
-            <h1 className="uppercase font-bold cursor-pointer bg-indigo-800 p-2 mb-2 rounded-md">mijdo</h1>
+            <h1 className={`p-2 mb-2 ${IconStyles}`}>mijdo</h1>
             <nav> 
                 {renderIconsBtn}
                 <ul className={`${isOpen === true ? 'flex' : 'hidden'} flex-col md:flex md:flex-row`}>
+                    <li> </li>
                     <li className="p-2"> <NavLink to={'/'}> hero </NavLink> </li>
                     <li className="p-2"> <NavLink to={'/about'}> about </NavLink> </li>
                     <li className="p-2"> <NavLink to={'/projects'}> projects </NavLink> </li>

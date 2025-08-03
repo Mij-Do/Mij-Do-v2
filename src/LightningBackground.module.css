@@ -12,7 +12,7 @@
 .wrapperWhite {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #c1c1ff, #ffffff);
+    background: linear-gradient(to bottom, #61abff, #98a8bb);
     overflow: hidden;
     position: fixed;
     z-index: -1;
@@ -28,6 +28,7 @@
     background-repeat: repeat;
     opacity: 0.3;
     animation: moveStars 120s linear infinite;
+    background-color: #000000;
 }
 
 

@@ -1,12 +1,21 @@
 import styles from '../LightningBackground.module.css';
 
-const LightningBackground = () => {
+interface IProps {
+    enabled: boolean;
+}
+
+const LightningBackground = ({enabled}: IProps) => {
     return (
         <>
-            <div className={styles.wrapperDark}>
-                <div className={styles.stars}></div>
-                <div className={styles.lightning}></div>
-            </div>
+            {enabled === false ? 
+                                <div className={styles.wrapperWhite}>
+                                    <div className={styles.stars}></div>
+                                    <div className={styles.lightning}></div>
+                                </div> : 
+                                <div className={styles.wrapperDark}>
+                                    <div className={styles.stars}></div>
+                                    <div className={styles.lightning}></div>
+                                </div>}
         </>
     );
 };
