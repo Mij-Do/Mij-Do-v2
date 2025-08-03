@@ -1,7 +1,7 @@
 import styles from '../LightningBackground.module.css';
 
 interface IProps {
-    enabled: boolean;
+    enabled?: boolean;
 }
 
 const LightningBackground = ({enabled}: IProps) => {
