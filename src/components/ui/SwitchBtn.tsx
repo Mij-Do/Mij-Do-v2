@@ -1,4 +1,5 @@
 import { Switch } from '@headlessui/react';
+import { memo } from 'react';
 
 interface IProps {
     enabled: boolean;
@@ -28,4 +29,4 @@ function SwitchBtn({enabled, setEnabled}: IProps) {
     )
 }
 
-export default SwitchBtn;
+export default memo(SwitchBtn);

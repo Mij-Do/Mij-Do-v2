@@ -1,6 +1,7 @@
 import {SiGithub} from 'react-icons/si';
 import Buttons from './Button';
 import { IProjectData } from '../../interfaces';
+import { memo } from 'react';
 
 interface IProps {
     project: IProjectData;
@@ -9,7 +10,7 @@ interface IProps {
 
 const CardProjects = ({project, openModal}: IProps) => {
     const {imageURL, name, proGithub, proLink, title} = project;
-    // handeller
+    // handler
     const onClickDetails = () => {
         openModal();
     }
@@ -32,4 +33,4 @@ const CardProjects = ({project, openModal}: IProps) => {
     )
 }
 
-export default CardProjects;
+export default memo(CardProjects);

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 
 interface IProps {
     title: string;
@@ -18,4 +18,4 @@ const CardSkills = ({children, title}: IProps) => {
     )
 }
 
-export default CardSkills;
+export default memo(CardSkills);
