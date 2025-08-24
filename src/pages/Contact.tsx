@@ -1,7 +1,7 @@
 import { dataInputs } from "../data";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useCallback, useState } from "react";
 import { IValue } from "../interfaces";
 import toast, { Toaster } from 'react-hot-toast';
 import { InputValidation } from "../components/validation";
@@ -21,7 +21,7 @@ const Contact = () => {
 
     
     // handeller
-    const onSubmitHandeller = (event: React.FormEvent<HTMLFormElement>) => {
+    const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         
         const errors = InputValidation({user: value.user, email: value.email, msg: value.msg});
@@ -38,19 +38,16 @@ const Contact = () => {
         toast('Email was Send Succssefully!');
     }
     
-    const onChangeHandeller = (evt: ChangeEvent<HTMLInputElement>) => {
+    const onChangeHandler = useCallback((evt: ChangeEvent<HTMLInputElement>) => {
         const name = evt.target.name as keyof IValue;
         setValue((prev) => ({
             ...prev,
             [name]: evt.target.value,
         }));
-        setErrors({
-            ...errors,
-            [name]: '',
-        })
-    }
+        setErrors(prev => ({...prev, [name]: ''}))
+    }, [])
 
-    const onClickHandeller = () => {
+    const onClickHandler = () => {
 
     }
 
@@ -59,7 +56,7 @@ const Contact = () => {
     const renderInputs = dataInputs.map(input => 
         <div className="flex flex-col space-y-5">
             <label className="text-white text-center w-full bg-indigo-900 rounded-md p-2 mx-auto" htmlFor={input.id}>{input.label}</label>
-            <Input className="w-full mb-2" id={input.id} name={input.name} type={input.type} value={value[input.name]} onChange={onChangeHandeller}/>
+            <Input className="w-full mb-2" id={input.id} name={input.name} type={input.type} value={value[input.name]} onChange={onChangeHandler}/>
             <ErrorMsg msg={errors[input.name]} />
         </div>
     )
@@ -68,9 +65,9 @@ const Contact = () => {
         <section className="my-15">
             <h1 className="text-white text-center bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-3xl">Contact Me</h1>
             <div className="flex w-full justify-evenly items-center">
-                <form className="w-full md:w-lg" onSubmit={onSubmitHandeller}>
+                <form className="w-full md:w-lg" onSubmit={onSubmitHandler}>
                     {renderInputs}
-                    <Button onClick={onClickHandeller} className="text-white text-center hover:bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-lg transition">SEND MAIL</Button>
+                    <Button onClick={onClickHandler} className="text-white text-center hover:bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-lg transition">SEND MAIL</Button>
                 </form>
             </div>
             <Toaster  toastOptions={{style: {

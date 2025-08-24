@@ -13,7 +13,7 @@ const Projects = () => {
     const [selectedProject, setSelectedProject] = useState <Project | null> (null);
     
     
-    // handellers
+    // handlers
     const open = (project: Project) => {
         setSelectedProject(project); 
         setIsOpen(true);
