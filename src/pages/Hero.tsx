@@ -4,7 +4,7 @@ import TypingText from "../components/ui/HeaderEffect";
 const Hero = () => {
     return (
         <section className="text-white my-15">
-            <div className='flex flex-col items-center text-center w-200 mx-auto'>
+            <div className='flex flex-col items-center text-center md:w-180 mx-auto'>
                 <div>
                     <TypingText
                         texts={["HI, I AM A DEVELOPER..", "FRONTEND DEVELOPER", "REACT JS DEVELOPER"]}
