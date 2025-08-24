@@ -8,15 +8,17 @@ const RootLayout = () => {
 
         <>
             <LightningBackground />
-            <header className="text-white p-2 items-center rounded-b-md">
+            <header className="text-white items-center rounded-b-md">
                 <Navbar />
             </header>
-            <main className="md:m-5">
-                <Outlet />
-            </main>
-            <footer className='bg-indigo-950 w-full md:w-lg mx-auto rounded-md p-5'>
-                <Footer />
-            </footer>
+            <div className="flex flex-col justify-between h-[92vh]">
+                <main className="md:mx-5">
+                    <Outlet />
+                </main>
+                <footer className='bg-indigo-950 w-full md:w-lg mx-auto rounded-md p-5'>
+                    <Footer />
+                </footer>
+            </div>
         </>
     )
 }

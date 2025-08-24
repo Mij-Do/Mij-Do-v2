@@ -1,4 +1,3 @@
-import aboutImage from "./../assets/aboutImage.png"
 import { SiJavascript, SiHtml5, SiCss3, SiReact, SiBootstrap, SiTailwindcss, SiSass, SiTypescript } from "react-icons/si";
 import CardSkills from "../components/ui/CardSkills";
 
@@ -8,9 +7,6 @@ const About = () => {
 
             <h1 className="text-center bg-indigo-950 w-full md:w-lg rounded-md p-2 mb-5 mx-auto text-3xl">About Me</h1>
             <div className="flex flex-col justify-between items-center text-center  p-2 md:flex-row space-x-10">
-                <div className="w-fit mx-auto">
-                    <img className="w-full" src={aboutImage} alt="About Image" />
-                </div>
                 <p className="w-fit md:mx-2">
                     Hi, I'm Ahmed — a passionate Front-End Developer who builds modern, responsive, and user-friendly web interfaces. I specialize in turning creative ideas into functional and elegant websites using a solid tech stack that includes:
 
