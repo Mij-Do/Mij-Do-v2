@@ -4,9 +4,8 @@ import ToDoList from "./../assets/ToDoList2.png";
 import Calculator from "./../assets/calculator.png";
 import Leon from "./../assets/Leon-Templates-react.png";
 import Example from "./../assets/example-templates.png";
-
-
-import { Inputs, IProjectData } from "../interfaces";
+import { Inputs, IProjectData, ISkills } from "../interfaces";
+import { SiJavascript, SiHtml5, SiCss3, SiReact, SiBootstrap, SiTailwindcss, SiSass, SiTypescript, SiRedux, SiAxios } from "react-icons/si";
 
 
 export const dataProjects: IProjectData[] = [
@@ -94,3 +93,66 @@ export const dataInputs: Inputs[] = [
     },
 ];
 
+
+export const dataSkills: ISkills[] = [
+    {
+        id: 1,
+        title: 'Html5',
+        children: SiHtml5,
+        color: 'bg-orange-400',
+    },
+    {
+        id: 2,
+        title: 'Css3',
+        children: SiCss3,
+        color: 'bg-blue-400',
+    },
+    {
+        id: 3,
+        title: 'Java Script',
+        children: SiJavascript,
+        color: 'bg-yellow-400',
+    },
+    {
+        id: 4,
+        title: 'Type Script',
+        children: SiTypescript,
+        color: 'bg-indigo-400',
+    },
+    {
+        id: 5,
+        title: 'ReactJS',
+        children: SiReact,
+        color: 'bg-indigo-400',
+    },
+    {
+        id: 6,
+        title: 'BootStrap',
+        children: SiBootstrap,
+        color: 'bg-purple-400',
+    },
+    {
+        id: 7,
+        title: 'TailWind Css',
+        children: SiTailwindcss,
+        color: 'bg-blue-400',
+    },
+    {
+        id: 8,
+        title: 'Sass',
+        children: SiSass,
+        color: 'bg-pink-400',
+    },
+    {
+        id: 9,
+        title: 'Axios',
+        children: SiAxios,
+        color: 'bg-[#5a29e4]',
+    },
+    {
+        id: 10,
+        title: 'Redux-Toolkit',
+        children: SiRedux,
+        color: 'bg-[#593d88]',
+    },
+]

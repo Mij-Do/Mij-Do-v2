@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 export interface IProjectData {
     id: string | undefined;
     title: string;
@@ -28,4 +30,11 @@ export interface IValue {
     user: string,
     email: string,
     msg: string,
+}
+
+export interface ISkills {
+    id: number;
+    title: string;
+    children: IconType;
+    color: string;
 }
