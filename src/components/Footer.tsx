@@ -3,7 +3,7 @@ const Footer = () => {
         <>
             <div className="text-center text-white">
                 <div className='flex justify-center items-center space-x-4'>
-                    <a href="https://drive.google.com/file/d/1LNyGTKou2PqLopryDJ0ez9oYOh8aYxlC/view" target="_blank" className="bg-indigo-800 hover:bg-indigo-600 border-2 border-white p-2 rounded-md cursor-pointer transition">CV</a>
+                    <a href="https://drive.google.com/file/d/1S5jaPZALLH5QAZz_fF-Tu6Wo4QruXMTs/view" target="_blank" className="bg-indigo-800 hover:bg-indigo-600 border-2 border-white p-2 rounded-md cursor-pointer transition">CV</a>
                 </div>
                 <p>Created By &copy; Ahmed Samir </p>
             </div>
